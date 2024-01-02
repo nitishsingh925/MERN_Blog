@@ -9,7 +9,7 @@ const PostPage = () => {
   const { userInfo } = useContext(UserContext);
   const { id } = useParams();
   useEffect(() => {
-    fetch(`${POST_URL}/${id}`).then((response) => {
+    fetch(`${POST_URL}${id}`).then((response) => {
       response.json().then((postInfo) => {
         setPostInfo(postInfo);
       });
